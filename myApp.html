@@ -2,9 +2,25 @@
 <html>
   <head>
     <link rel="stylesheet" href="Style.css">
+    <script src="/FizzBuzz.js"></script>
+    <title>myApp</title>
   </head>
   <body>
     <h1>Hello World!</h1>
-    <p>My name is Daniel and this is my first app in html. This will not be very interesting as I'm just going to use this app to practise using Github and visualstudio code together.</p>
+    <p>My name is Daniel and this is my first app in html. This will not be very interesting as I'm just going to use this app to practise using 
+      Github and visualstudio code together.</p>
+    <h1>FizzBuzz</h1>
+    <form>
+      Enter the value for Fizz: 
+      <input type="text" name="Fizz" id="Fizz">
+      &emsp; Enter the value for Buzz: 
+      <input type="text" name="Buzz" id="Buzz">
+      <br> How many times do you want to run the code?
+      <input type="text" name="runs" id="runs">
+    </form>
+    <div class="center">
+      <button type="button" onclick="fizzBuzz(Fizz, Buzz, runs)" >Run</button>
+    </div>
+        
   </body>
 </html>
