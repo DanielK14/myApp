@@ -1,5 +1,5 @@
 function fizzBuzz(fizz, buzz, runs){
-    /*for (let i=0; i < runs ; i++) {
+    for (let i=1; i < runs ; i++) {
         if (i%fizz == 0 && i%buzz == 0){
             document.write("FizzBuzz");
         }else if (i%fizz == 0 && i%buzz != 0){
@@ -9,7 +9,7 @@ function fizzBuzz(fizz, buzz, runs){
         }else{
             document.write(i);
         }
-    }*/
+    }
     console.log("Hello");
     document.write("hi");
 }
