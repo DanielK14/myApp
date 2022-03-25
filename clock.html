@@ -34,7 +34,8 @@
           let time = currentDate.getHours() + ":" + currentDate.getMinutes();
           document.getElementById("clockDiv").innerHTML = time;
         }
-        var timer = setInterval(showTime, 10000);
+        showTime();
+        setInterval(showTime, 10000);
       </script>
     </div>
     <div class="row">
@@ -48,7 +49,8 @@
               .then(res => res.json())
               .then(data => document.getElementById("newYorkClock").innerHTML = data.datetime.slice(11,16));
               }
-            var timer = setInterval(getNewYork, 10000);
+            getNewYork();
+            setInterval(getNewYork, 10000);
           </script>
         </div>
       </div>
@@ -62,7 +64,8 @@
               .then(res => res.json())
               .then(data => document.getElementById("tokyoClock").innerHTML = data.datetime.slice(11,16));
               }
-            var timer = setInterval(getTokyo, 10000);
+            getTokyo();
+              setInterval(getTokyo, 10000);
           </script>
         </div>
       </div>
@@ -76,7 +79,8 @@
               .then(res => res.json())
               .then(data => document.getElementById("amsterdamClock").innerHTML = data.datetime.slice(11,16));
             }
-            var timer = setInterval(getAmsterdam, 10000);
+            getAmsterdam();
+            setInterval(getAmsterdam, 10000);
           </script>
         </div>
       </div>
