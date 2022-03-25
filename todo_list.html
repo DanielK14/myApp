@@ -25,14 +25,15 @@
           </ul>
       </div>
     </nav>
-    <h1>Todo List</h1>
-    <p>WIP here I'm going to make a todo list app</p>
-    <div id="listDiv">
+    <h1 class="container d-flex align-items-center justify-content-center">Todo List</h1>
+    <div id="listDiv" class="container d-flex align-items-center justify-content-center">
       <ul id="list">
 
       </ul>
     </div>
-    <input type="text" id="inputTask"><input type="button" onclick="callFunc()" value="Add">
+    <div class="container d-flex align-items-center justify-content-center">
+      <input type="text" id="inputTask"><input type="button" onclick="callFunc()" value="Add">
+    </div>
     <script>
       var ul = document.getElementById("list");
       var listID = 0;
@@ -43,10 +44,10 @@
       }
 
       function addTask(task){
-        var generateFunc = "removeTask(" + listID + ")";
+        var generateRemoveCall = "removeTask(" + listID + ")";
         var li = document.createElement('li');
         var button = document.createElement('button');
-        button.setAttribute("onclick", generateFunc);
+        button.setAttribute("onclick", generateRemoveCall);
         button.innerHTML = "done";
         li.appendChild(document.createTextNode(task));
         li.appendChild(button);
@@ -58,6 +59,8 @@
 
       function clearText(){
         document.getElementById("inputTask").value = "";
+        document.getElementById("inputTask").focus();
+        document.getElementById("inputTask").select();
       }
       function removeTask(id){
         const list = document.getElementById(id);
