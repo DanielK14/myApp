@@ -9,7 +9,6 @@
     <nav class="navbar navbar-expand-sm bg-primary navbar-dark justify-content-center">
 
       <div class="container-fluid">
-        <!-- Links -->
         <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="myApp.html">Home</a>
@@ -25,10 +24,45 @@
             </li>
           </ul>
       </div>
-    
     </nav>
     <h1>Todo List</h1>
     <p>WIP here I'm going to make a todo list app</p>
-    
+    <div id="listDiv">
+      <ul id="list">
+
+      </ul>
+    </div>
+    <input type="text" id="inputTask"><input type="button" onclick="callFunc()" value="Add">
+    <script>
+      var ul = document.getElementById("list");
+      var listID = 0;
+
+      function callFunc(){
+        let task = document.getElementById("inputTask").value;
+        addTask(task);
+      }
+
+      function addTask(task){
+        var generateFunc = "removeTask(" + listID + ")";
+        var li = document.createElement('li');
+        var button = document.createElement('button');
+        button.setAttribute("onclick", generateFunc);
+        button.innerHTML = "done";
+        li.appendChild(document.createTextNode(task));
+        li.appendChild(button);
+        li.setAttribute("id", listID);
+        ul.appendChild(li);
+        listID++;
+        clearText();
+      }
+
+      function clearText(){
+        document.getElementById("inputTask").value = "";
+      }
+      function removeTask(id){
+        const list = document.getElementById(id);
+        list.remove();
+      }
+    </script>
   </body>
 </html>
