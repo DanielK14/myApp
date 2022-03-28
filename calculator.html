@@ -3,6 +3,7 @@
   <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="calculator.js"></script>
     <title>myApp</title>
   </head>
   <body>
@@ -30,50 +31,51 @@
     <div id="calcDiv" class="container">
       <div class="row">
         <div class="col">
-          <input type="button" value="1">
+          <input type="button" value="1" onclick="inputKey(1)">
         </div>
         <div class="col">
-          <input type="button" value="2">
+          <input type="button" value="2" onclick="inputKey(2)">
         </div>
         <div class="col">
-          <input type="button" value="3">
+          <input type="button" value="3" onclick="inputKey(3)">
         </div>
         <div class="col">
-          <input type="button" value="*">
+          <input type="button" value="*" onclick="opperationCommand('*')">
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <input type="button" value="4">
+          <input type="button" value="4" onclick="inputKey(4)">
         </div>
         <div class="col">
-          <input type="button" value="5">
+          <input type="button" value="5" onclick="inputKey(5)">
         </div>
         <div class="col">
-          <input type="button" value="6">
+          <input type="button" value="6" onclick="inputKey(6)">
         </div>
         <div class="col">
-          <input type="button" value="-">
+          <input type="button" value="-" onclick="opperationCommand('-')">
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <input type="button" value="7">
+          <input type="button" value="7" onclick="inputKey(7)">
         </div>
         <div class="col">
-          <input type="button" value="8">
+          <input type="button" value="8" onclick="inputKey(8)">
         </div>
         <div class="col">
-          <input type="button" value="9">
+          <input type="button" value="9" onclick="inputKey(9)">
         </div>
         <div class="col">
-          <input type="button" value="+">
+          <input type="button" value="+" onclick="opperationCommand('+')">
         </div>
       </div>
       <div class="row">
-        <div class="col"><input type="button" value="0"></div>
-        <div class="col"><input type="button" value="/"></div>
-        <div class="col"><input type="button" value="="></div>
+        <div class="col"><input type="button" value="0" onclick="inputKey(0)"></div>
+        <div class="col"><input type="button" value="/" onclick="opperationCommand('/')"></div>
+        <div class="col"><input type="button" value="=" onclick="calculationFunc()"></div>
+        <div class="col"><input type="button" value="CE" onclick="clearField()"></div>
       </div>
     </div>
   </body>
